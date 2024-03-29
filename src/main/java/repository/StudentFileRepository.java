@@ -15,7 +15,7 @@ public class StudentFileRepository extends AbstractFileRepository<String, Studen
 
     protected void loadFromFile() {
         try (BufferedReader buffer = new BufferedReader(new FileReader(filename))) {
-            buffer.lines().toList().forEach(line -> {
+            buffer.lines().collect(Collectors.toList()).forEach(line -> {
                 String[] result = line.split("#");
                 Student student = new Student(result[0], result[1], Integer.parseInt(result[2]));
                 try {
