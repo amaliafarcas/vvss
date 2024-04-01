@@ -17,6 +17,17 @@ public class AddStudentTest {
     }
 
     @Test
+    public void testIdEmpty() {
+        repository.save(new Student("", "ama", 112));
+        assert repository.findOne("") == null;
+    }
+
+    @Test
+    public void testIdSuccess() {
+        repository.save(new Student("932", "ama", 111));
+        assert repository.findOne("932") != null;
+    }
+    @Test
     public void testNumeNull() {
         repository.save(new Student("112", null, 113));
         assert repository.findOne("112") == null;
