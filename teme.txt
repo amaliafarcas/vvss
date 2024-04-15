@@ -29,3 +29,7 @@
 1#file#7#6
 9#pp#9#9
 9#ff#5#2
+2#xml#8#7
+1#file#7#6
+9#pp#9#9
+A1#descriere#2#1
